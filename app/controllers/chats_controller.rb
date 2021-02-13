@@ -17,7 +17,7 @@ class ChatsController < ApplicationController
   #   render :plain => @chats.content
   # end
 
-  def info
+  def show
     @user_id = :user_id
     @event_id = :event_id
     @content = :content
