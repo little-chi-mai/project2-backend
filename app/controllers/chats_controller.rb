@@ -1,26 +1,13 @@
 class ChatsController < ApplicationController
 
-  def index
-    @chats = Chat.all
+  def content
+    render :plain => index
   end
-
-  def new
-    @chat = Chat.new
-  end
-
-  def create
-    @chat = Chat.create chat_params
-    redirect_to root_path
-  end
-
-  # def content
-  #   render :plain => @chats.content
-  # end
 
   def info
     @user_id = :user_id
     @event_id = :event_id
-    @content = :content
+    content = :content
 
     render :json => {
       :user_id => user_id,
