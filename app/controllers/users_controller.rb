@@ -14,28 +14,37 @@ class UsersController < ApplicationController
     end
   end
 
-  def new
-    @users = User.new
+  def show
+    @user = User.find(params[:id])
+    if @user
+      render json: {
+        user: @user
+      }
+    else
+      render json: {
+        status: 500,
+        errors: ['user not found']
+      }
   end
 
   def create
-    @user = User.new user_params
-  end
-
-  def info
-    user = :user_id,
-    email = :email,
-    about_me = :about_me
-
-    render :json => {
-      :user_id => user_id,
-      :email => email,
-      :about_me => about_me
-    }
+    @user = User.new(user_params)
+    if @user.save
+      login!
+      render json: {
+        status: :created,
+        user: @user
+      }
+    else
+      render json: {
+        status: 500,
+        errors: @user.errors.full_messages
+      }
+    end
   end
 
   private
   def user_params
-    params_require(:user_id).permit(:email, :about_me)
+    params.require(:user).permit(:name, :email, :about_me, :password, :password_confirmation)
   end
 end

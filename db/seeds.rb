@@ -1,8 +1,8 @@
 User.destroy_all
-User.create(:name => 'Mai', :email => 'mai@email.com', :about_me => 'this is some test data about Mai')
-User.create(:name => 'Yang', :email => 'yang@email.com', :about_me => 'this is some test data about Yang')
-User.create(:name => 'Naveen', :email => 'naveen@email.com', :about_me => 'this is some test data about Naveen')
-User.create(:name => 'Ken', :email => 'ken@email.com', :about_me => 'this is some test data about me')
+User.create(:name => 'Mai', :email => 'mai@email.com', :about_me => 'this is some test data about Mai', :password => 'chicken')
+User.create(:name => 'Yang', :email => 'yang@email.com', :about_me => 'this is some test data about Yang', :password => 'chicken')
+User.create(:name => 'Naveen', :email => 'naveen@email.com', :about_me => 'this is some test data about Naveen', :password => 'chicken')
+User.create(:name => 'Ken', :email => 'ken@email.com', :about_me => 'this is some test data about me', :password => 'chicken')
 puts "#{ User.count } users created."
 
 Chat.destroy_all
