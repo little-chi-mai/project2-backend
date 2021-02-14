@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :chats, :only => [:index, :new, :create, :show]
 
   post '/users' => 'users#create'
-  get '/users/user_id', => 'users#show'
-  get '/users', => 'users#index'
+  get '/users/user_id' => 'users#show'
+  get '/users' => 'users#index'
 
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'

@@ -4,9 +4,7 @@ class ChatsController < ApplicationController
     render :plain => index
   end
 
-<<<<<<< HEAD
-  def info
-=======
+
   def new
     @chat = Chat.new
   end
@@ -21,7 +19,6 @@ class ChatsController < ApplicationController
   # end
 
   def show
->>>>>>> 83800ecf6b9cfddca6099f0c8f2aeff1d2f53001
     @user_id = :user_id
     @event_id = :event_id
     content = :content
