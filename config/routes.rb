@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :events
 
+  resources :restaurants
+
   post '/users' => 'users#create'
   get '/users/user_id' => 'users#show'
   get '/users' => 'users#index'
