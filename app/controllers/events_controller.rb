@@ -7,6 +7,11 @@ class EventsController < ApplicationController
     @event = Event.create event_params
   end
 
+  def destroy
+    event = Event.find params[:id]
+    event.destroy
+  end
+
   private
   def event_params
     params.require(:event).permit(:title, :introduction, :date, :user, :restaurant_id)
