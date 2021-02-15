@@ -4,6 +4,10 @@ class ChatsController < ApplicationController
     render :plain => index
   end
 
+  def index
+    @chats = Chat.all
+  end
+
 
   def new
     @chat = Chat.new
