@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-# The guide for this specified username, I had already used name in the database. If things do not work I may need to change things back
+# The guide for this specified "username", I had already used name in the database. If things do not work I may need to change things back
 
   def create
     @user = User.find_by(name: session_params[:name])
