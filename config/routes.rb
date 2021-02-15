@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :chats, :only => [:index, :new, :create, :show]
 
+  resources :events
+
   post '/users' => 'users#create'
   get '/users/user_id' => 'users#show'
   get '/users' => 'users#index'
