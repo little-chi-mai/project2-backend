@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 3 }
 
   has_many :chats
+  has_many :events
+  has_many :attendants
 end

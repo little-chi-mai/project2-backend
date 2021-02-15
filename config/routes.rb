@@ -6,7 +6,13 @@ Rails.application.routes.draw do
 
   resources :chats, :only => [:index, :new, :create, :show]
 
-  root :to => 'pages#home'
+  resources :events
+
+  resources :restaurants
+
+  post '/users' => 'users#create'
+  get '/users/user_id' => 'users#show'
+  get '/users' => 'users#index'
 
   get '/login' => 'session#new'
   post '/login' => 'sessions#create'
