@@ -9,6 +9,21 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find params[:id]
+    if @event
+      render json: {
+        event: @event
+      }
+    else
+      render json:{
+        status: 500,
+        error: ['no event found']
+      }
+    end
+  end
+
+  def update
+    event = Event.find params[:id]
+    event.update event_params
   end
 
   def destroy
