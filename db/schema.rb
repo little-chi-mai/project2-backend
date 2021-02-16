@@ -64,11 +64,4 @@ ActiveRecord::Schema.define(version: 2021_02_16_075747) do
     t.string "password_digest"
   end
 
-  create_table "wishlists", force: :cascade do |t|
-    t.integer "restaurant_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
