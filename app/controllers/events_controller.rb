@@ -7,6 +7,10 @@ class EventsController < ApplicationController
     @event = Event.create event_params
   end
 
+  def show
+    @event = Event.find params[:id]
+  end
+
   def destroy
     event = Event.find params[:id]
     event.destroy
