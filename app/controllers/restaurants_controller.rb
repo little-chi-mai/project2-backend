@@ -1,16 +1,8 @@
 class RestaurantsController < ApplicationController
+
+
   def index
     @restaurants = Restaurant.all
-    if @restaurants
-      render json: {
-        restaurants: @restaurants
-      }
-    else
-      render json:{
-        status: 500,
-        error: ['no users found']
-      }
-    end
   end
 
   def create
@@ -35,8 +27,14 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    restaurant = Restaurant.find params[:id]
+    restaurant.destroy
+
+  end
+
   private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :image, :price_level, :rating, :website, :contact, :latitude, :longitude)
+    params.require(:restaurant).permit(:name, :address, :image, :price_level, :rating, :website, :contact, :latitude, :longitude, :user_id)
   end
 end
