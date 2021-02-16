@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :chats
   has_many :events
   has_many :attendants
+  has_many :restaurants
 end

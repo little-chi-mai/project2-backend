@@ -59,3 +59,9 @@ E2.attendants << A2 << A4
 puts 'restaurant and events'
 R1.events << E1
 R2.events << E2
+
+puts 'restaurants and user'
+U1.restaurants << R1
+U2.restaurants << R2
+U3.restaurants << R3
+U4.restaurants << R4
