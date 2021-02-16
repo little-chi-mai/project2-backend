@@ -55,3 +55,7 @@ E2.chats << C3 << C4
 puts 'event and attendants'
 E1.attendants << A1 << A3
 E2.attendants << A2 << A4
+
+puts 'restaurant and events'
+R1.events << E1
+R2.events << E2
