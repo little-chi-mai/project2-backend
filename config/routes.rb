@@ -10,9 +10,6 @@ Rails.application.routes.draw do
 
   resources :restaurants
 
-  post '/users' => 'users#create'
-  get '/users/user_id' => 'users#show'
-  get '/users' => 'users#index'
 
   get '/login' => 'session#new'
   post '/login' => 'sessions#create'
