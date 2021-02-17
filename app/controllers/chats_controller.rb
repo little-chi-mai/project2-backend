@@ -15,7 +15,6 @@ class ChatsController < ApplicationController
 
   def create
     @chat = Chat.create chat_params
-    redirect_to root_path
   end
 
   # def content
@@ -36,6 +35,6 @@ class ChatsController < ApplicationController
 
   private
   def chat_params
-    params.require(:chat).permit(:content)
+    params.require(:chat).permit(:user_id, :event_id, :content)
   end
 end
