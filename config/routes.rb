@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/users/user_id' => 'users#show'
   get '/users' => 'users#index'
 
+  get '/search' => 'pages#index'
+
   get '/login' => 'session#new'
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
