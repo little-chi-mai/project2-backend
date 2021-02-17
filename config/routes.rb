@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :restaurants
 
+  resources :attendants
+
 
   get '/login' => 'session#new'
   post '/login' => 'sessions#create'
