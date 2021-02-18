@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'anchorite1001.github.io'
+    origins 'anchorite1001.github.io/project2-frontend/'
     resource '*',
       :headers => :any,
       :methods => [:get, :post, :put, :patch, :delete, :options, :head],
