@@ -1,1 +1,1 @@
-json.extract! chat, :id, :user_id, :event_id, :content, :created_at, :updated_at
+json.extract! chat, :id, :user, :event, :content, :created_at, :updated_at
