@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   resources :attendants
 
 
+  get '/search' => 'pages#index'
+
   get '/login' => 'session#new'
   post '/login' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
   get '/logged_in' => 'sessions#is_logged_in?'
 
   get '/chats/info' => 'chats#info'

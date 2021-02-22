@@ -25,10 +25,10 @@ E2 = Event.create(:title => 'graduation party', :introduction => 'graduation par
 puts "#{Event.count} events created."
 
 Restaurant.destroy_all
-R1 = Restaurant.create(:name => 'Mais kitchen', :address => '191 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '2', :rating => '4.5', :website => 'www.maiskitchen.co.au', :contact => '0429111111', :latitude => '-33.8660355', :longitude => '151.2012092')
-R2 = Restaurant.create(:name => 'Ken on the rock', :address => '250 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '3', :rating => '4', :website => 'www.kenontherock.co.au', :contact => '0429686868', :latitude => '-40.8660355', :longitude => '100.2012092')
-R3 = Restaurant.create(:name => 'Yang house', :address => '7 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '4', :rating => '5', :website => 'www.yanghouse.co.au', :contact => '0412345678', :latitude => '-10.8660355', :longitude => '109.2012092')
-R4 = Restaurant.create(:name => 'Im Naveen', :address => '15 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '3', :rating => '4.5', :website => 'www.imnaveen.co.au', :contact => '0412345679', :latitude => '-19.8660355', :longitude => '111.2012092')
+R1 = Restaurant.create(:name => 'Mais kitchen', :address => '191 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '2', :rating => '4.5', :website => 'www.maiskitchen.co.au', :contact => '0429111111', :latitude => '-33.8660355', :longitude => '151.2012092', :place_id => 'R1')
+R2 = Restaurant.create(:name => 'Ken on the rock', :address => '250 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '3', :rating => '4', :website => 'www.kenontherock.co.au', :contact => '0429686868', :latitude => '-40.8660355', :longitude => '100.2012092', :place_id => 'R2')
+R3 = Restaurant.create(:name => 'Yang house', :address => '7 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '4', :rating => '5', :website => 'www.yanghouse.co.au', :contact => '0412345678', :latitude => '-10.8660355', :longitude => '109.2012092', :place_id => 'R3')
+R4 = Restaurant.create(:name => 'Im Naveen', :address => '15 Darlinghurst Rd, Darlinghurst, NSW 2010, Sydney, Australia', :price_level => '3', :rating => '4.5', :website => 'www.imnaveen.co.au', :contact => '0412345679', :latitude => '-19.8660355', :longitude => '111.2012092', :place_id => 'R4')
 
 puts "#{Restaurant.count} restaurants created."
 
