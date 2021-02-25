@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: session_params[:name])
 
     if @user && @user.authenticate(session_params[:password])
-      login!
+      session[:user_id] = @user.id
       render json: {
         logged_in: true,
         user: @user
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def is_logged_in?
-    if logged_in? && current_user
+    if session[:user_id] && current_user
       render json: {
         logged_in: true,
         user: current_user
@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    logout!
+    session[:user_id] = nil
     render json: {
       status: 200,
       logged_out: true
