@@ -20,10 +20,10 @@ class SessionsController < ApplicationController
   end
 
   def is_logged_in?
-    if session[:user_id] && current_user
+    if session[:user_id] && @current_user.present?
       render json: {
         logged_in: true,
-        user: current_user
+        user: @current_user
       }
     else
       render json: {
