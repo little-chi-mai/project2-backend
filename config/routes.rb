@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resources :attendants
 
 
-  get '/search' => 'pages#index'
+  get '/search/:term' => 'pages#index'
+  get '/fetchimage/:reference' => 'pages#fetch_image'
 
   get '/login' => 'sessions#new'
 
