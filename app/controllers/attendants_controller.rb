@@ -1,7 +1,7 @@
 class AttendantsController < ApplicationController
 
 def index
-  @attendants = Attendant.all
+  @attendants = Attendant.all.order("created_at DESC")
 end
 
 def create

@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def fetch_image
     @client = GooglePlaces::Client.new(ENV["GOOGLE_API_KEY"])
     @spot = @client.spot(params[:reference])
-    url = @spot.photos[0].fetch_url(400)
+    url = @spot.photos[0].fetch_url(600)
     render json:url
   end
 end
